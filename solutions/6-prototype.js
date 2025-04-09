@@ -1,21 +1,21 @@
 // BEGIN
-// Конструктор для абстракции "Деньги"
+
 function Money(value, currency = 'usd') {
   this.value = value;
   this.currency = currency;
 }
 
-// Возвращает значение денег
+
 Money.prototype.getValue = function getValue() {
   return this.value;
 };
 
-// Возвращает валюту денег
+
 Money.prototype.getCurrency = function getCurrency() {
   return this.currency;
 };
 
-// Конвертирует деньги в указанную валюту
+
 Money.prototype.exchangeTo = function exchangeTo(targetCurrency) {
   if (this.currency === targetCurrency) {
     return new Money(this.value, targetCurrency);
